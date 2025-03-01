@@ -1,0 +1,19 @@
+.green{
+    color: rgb(86, 165, 119);
+}
+
+.yellow{
+    color: rgb(207, 187, 110);
+}
+
+.activeOption{
+    background-color: rgb(69, 69, 69);
+}
+
+.option{
+    text-align: left;
+}
+
+.hoverOptions{
+    background-color: rgb(53 , 53, 53);
+}
