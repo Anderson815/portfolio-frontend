@@ -1,7 +1,7 @@
-import { TypeRequestEnum } from "@/app/enum/TypeRequestEnum";
 import { Box } from "@mui/material";
 import { useState } from "react";
-import { getColotType, getStyleItem } from "./ListItemScript";
+import { getColorType, getStyleItem } from "./ListItemScript";
+import { TypeRequestEnum } from "@/app/enum/TypeRequestEnum";
 
 interface LitItemProps{
 title: string;
@@ -18,7 +18,7 @@ export default function ListItem ({title, type, active, changeActive} : LitItemP
         setHover(!hover);
     }
 
-    let colorType = getColotType(type);
+    let colorType = getColorType(type);
 
     return (
         <li>
