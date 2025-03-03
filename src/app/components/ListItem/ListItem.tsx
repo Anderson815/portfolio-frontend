@@ -4,10 +4,10 @@ import { getColorType, getStyleItem } from "./ListItemScript";
 import { TypeRequestEnum } from "@/app/enum/TypeRequestEnum";
 
 interface LitItemProps{
-title: string;
-active?: boolean;
-type: TypeRequestEnum;
-changeActive: () => void;
+    title: string;
+    active?: boolean;
+    type: TypeRequestEnum;
+    changeActive: () => void;
 } 
 
 export default function ListItem ({title, type, active, changeActive} : LitItemProps) {

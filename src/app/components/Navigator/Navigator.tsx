@@ -7,6 +7,13 @@ import { useState } from "react";
 import ListItem from "../ListItem/ListItem";
 import { NavigatorOptionsEnum } from "./NavigatorOptionsEnum";
 
+interface LitItemProps{
+    title: string;
+    active?: boolean;
+    type: TypeRequestEnum;
+    changeActive: () => void;
+} 
+
 export default function  Navigator(){
     
     const [indiceActive, setIndiceActive] = useState<number>(0);
