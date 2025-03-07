@@ -55,7 +55,7 @@ export default function Home() {
   return (
       <Grid2 container spacing={2}>
         <Grid2 size={2}>
-          <Navigator />
+          <Navigator  callDataFromTypeOption={() => callDataFromTypeOption(NavigatorOptionsEnum.ABOUT)}/>
         </Grid2>
         <Grid2 size={10}>
 
