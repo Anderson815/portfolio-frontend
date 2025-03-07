@@ -7,53 +7,57 @@ import { useState } from "react";
 import ListItem from "../ListItem/ListItem";
 import { NavigatorOptionsEnum } from "./NavigatorOptionsEnum";
 
-interface LitItemProps{
-    title: string;
-    active?: boolean;
-    type: TypeRequestEnum;
-    changeActive: () => void;
-} 
+interface NavigatorProps{
+    callDataFromTypeOption: () => void;
+  } 
 
-export default function  Navigator(){
+export default function  Navigator({callDataFromTypeOption}: NavigatorProps){
     
     const [indiceActive, setIndiceActive] = useState<number>(0);
 
     const changeSelectItem = (indice: number) => {
         setIndiceActive(indice);
-    }
+        callDataFromTypeOption();
+      }
 
     return (
         <Box className="border" sx={{width: "100%"}}>
             <ul className={`${style.noneDecorator} ${style.paddinginline1}`}>
                 <ListItem 
-                title="Hasd" 
+                title="Home" 
                 type={TypeRequestEnum.GET} 
                 active={indiceActive === NavigatorOptionsEnum.HOME} 
                 changeActive={() => changeSelectItem(NavigatorOptionsEnum.HOME)}
                 />
                 <ListItem 
-                title="Sasdasd" 
+                title="Sobre" 
                 type={TypeRequestEnum.GET} 
                 active={indiceActive === NavigatorOptionsEnum.ABOUT}
                 changeActive={() => changeSelectItem(NavigatorOptionsEnum.ABOUT)}
                 />
                 <ListItem 
-                title="Casdasd" 
+                title="Habilidades" 
                 type={TypeRequestEnum.GET} 
-                active={indiceActive === NavigatorOptionsEnum.WORKS}
-                changeActive={() => changeSelectItem(NavigatorOptionsEnum.WORKS)}
+                active={indiceActive === NavigatorOptionsEnum.KNOWLEDGE}
+                changeActive={() => changeSelectItem(NavigatorOptionsEnum.KNOWLEDGE)}
                 />
                 <ListItem 
-                title="Pasdsad" 
+                title="Projetos" 
                 type={TypeRequestEnum.GET} 
                 active={indiceActive === NavigatorOptionsEnum.PROJECTS}
                 changeActive={() => changeSelectItem(NavigatorOptionsEnum.PROJECTS)}
                 />
                 <ListItem 
-                title="COaaaaa" 
+                title="Experiência" 
+                type={TypeRequestEnum.GET} 
+                active={indiceActive === NavigatorOptionsEnum.WORKS}
+                changeActive={() => changeSelectItem(NavigatorOptionsEnum.WORKS)}
+                />
+                <ListItem 
+                title="Contato" 
                 type={TypeRequestEnum.POST} 
-                active={indiceActive === NavigatorOptionsEnum.KNOWLEDGE}
-                changeActive={() => changeSelectItem(NavigatorOptionsEnum.KNOWLEDGE)}
+                active={indiceActive === NavigatorOptionsEnum.CONTACT}
+                changeActive={() => changeSelectItem(NavigatorOptionsEnum.CONTACT)}
                 />
             </ul>
         </Box>

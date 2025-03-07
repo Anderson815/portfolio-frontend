@@ -3,5 +3,6 @@ export enum NavigatorOptionsEnum{
     ABOUT,
     WORKS,
     PROJECTS,
-    KNOWLEDGE
+    KNOWLEDGE,
+    CONTACT
 } 
